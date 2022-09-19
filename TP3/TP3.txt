@@ -8,7 +8,7 @@
 - Les accès au serveur est journaliser, les journaux ne sont pas accessible sur le site web.
 - Utiliser un mot de passe robuste pour l'authentification au server ( Majuscule, minuscule, chiffre, Caractères)
 - Vérifier régulièrement les journaux du server
-
+s
 ******************  Exigence Certificat & Chiffrement  ******************
 
 
