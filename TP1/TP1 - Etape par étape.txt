@@ -1,0 +1,13 @@
+# generer la clé privée
+openssl genrsa -out private-key.pem 3072
+
+# generer la clé public
+openssl rsa -in private-key.pem -pubout -out public-key.pem
+
+#chiffre un fichier texte avec la clé public de mon collègue
+
+openssl rsautl -encrypt -pubin -inkey public-key_mathieu.pem -in texte.txt -out texte_chiffre.enc
+
+#dechiffrer fichier texte avec la clé
+
+openssl rsautl -decrypt -inkey mateo.private.pem -in texte_chiffre_mathieu -out texte.txt
