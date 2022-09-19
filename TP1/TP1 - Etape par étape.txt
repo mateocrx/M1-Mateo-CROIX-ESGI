@@ -17,3 +17,12 @@ openssl rsautl -decrypt -inkey mateo.private.pem -in texte_chiffre_mathieu -out 
 ********* AES - Openssl & Python  **********
 
 
+#Generer clé AES
+
+openssl enc -aes-256-cbc -k test -P -md sha1
+
+salt=A5D30F58F44D0335
+key=65079B61A29513E921BD25171F827DD69BF1BA32836D5DAFCC958994F1EE1558
+iv =6841E694E73757D5415F4CFAA4B4F6E6
+
+#
