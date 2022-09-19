@@ -1,4 +1,4 @@
-*********  RSA - OpenSSL  ***********
+***********************  RSA - OpenSSL  ***********************
 
 # generer la clé privée
 openssl genrsa -out private-key.pem 3072
@@ -14,15 +14,17 @@ openssl rsautl -encrypt -pubin -inkey public-key_mathieu.pem -in texte.txt -out 
 
 openssl rsautl -decrypt -inkey mateo.private.pem -in texte_chiffre_mathieu -out texte.txt
 
-********* AES - Openssl & Python  **********
+*********************** AES - Openssl & Python  ***********************
 
 
 #Generer clé AES
 
-openssl enc -aes-256-cbc -k test -P -md sha1
+openssl enc -aes-256-cbc -pass pass:test -p -in hash_sha.txt -out file.enc
 
 salt=A5D30F58F44D0335
 key=65079B61A29513E921BD25171F827DD69BF1BA32836D5DAFCC958994F1EE1558
 iv =6841E694E73757D5415F4CFAA4B4F6E6
 
-#
+#dechiffrer
+
+openssl enc -aes-256-cbc  -d -A -in file.enc -out decrypt.txt -p
