@@ -1,0 +1,17 @@
+******************  Exigence Server WEB  ******************
+
+- Tous les flux sont chiffrés. Pour un site web, cela signifie utiliser du https
+- Les sites doivent être sauvegarder régulièrement sur un cloud ou équipement externaliser
+- Les données sensibles sont stockées en France (Obligation de la PSSI de l'Etat).
+- Le serveur, les sites et les applications web doit être mis à jour régulièrement
+- Les traitements de données à caractère personnel des applications du site web sont mis en conformité avec le RGPD.
+- Les accès au serveur est journaliser, les journaux ne sont pas accessible sur le site web.
+- Utiliser un mot de passe robuste pour l'authentification au server ( Majuscule, minuscule, chiffre, Caractères)
+- Vérifier régulièrement les journaux du server
+
+******************  Exigence Certificat & Chiffrement  ******************
+
+
+- Vérifier la validité et date de péremption (Utiliser un outils de rappel)
+- Utiliser le protocole TLS.
+- Utiliser la méthode de chiffrement AES-256
