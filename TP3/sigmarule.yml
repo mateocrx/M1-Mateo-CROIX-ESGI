@@ -1,0 +1,18 @@
+title: Detect /etc/passwd
+id: d2476vul-6c9d-579b-b53c-75ad79c22541
+status: TEST
+description: detect path
+author: mateocrx
+date: 2022/09/20
+detection:
+   reasons:
+      reasons:
+         - '*/etc/passwd*,*'
+   condition: reasons
+falsepositives:
+   - our vulnerability scanner
+level: medium
+information: you need to filter for a unique source_ip, timeframe of 60 minutes, at least 10 requests. For the investigation, take a look if this source_ip has http_code=200 which means a possible success of a SQL Injection
+tags:
+   - attack.initial_access
+   - attack.t1190
