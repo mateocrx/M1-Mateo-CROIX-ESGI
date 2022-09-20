@@ -1,25 +1,16 @@
-title: Detect of a SQL Injection by a Web Application Firewall
-id: d2476vul-6c9d-579b-b53c-75ad79c22541
-status: experimental
-description: detect if the field reasons contains SQLI=num
-author: ctechmat
-date: 2021/10/15
+title: "Injection Sql"
+status: test
+description: "Detect Sql Injection by keyword"
+author: Mathieu Vagnerre
+logsource:
+   category: webserver
+   definition: 'TEST'
 detection:
-  reasons:
-    - '*SQLI=1*,*'
-    - '*SQLI=2*,*'
-    - '*SQLI=3*,*'
-    - '*SQLI=4*,*'
-    - '*SQLI=5*,*'
-    - '*SQLI=6*,*'
-    - '*SQLI=7*,*'
-    - '*SQLI=8*,*'
-    - '*SQLI=9*,*'
-  condition: reasons
-falsepositives:
-   - our vulnerability scanner
-level: medium
-information: you need to filter for a unique source_ip, timeframe of 60 minutes, at least 10 requests. For the investigation, take a look if this source_ip has http_code=200 which means a possible success of a SQL Injection
-tags:
-   - attack.initial_access
-   - attack.t1190
+    keywords:
+        - '=select'
+        - '=union'
+        - '=concat'
+    condition: keywords
+fields:
+    - url
+level: high
