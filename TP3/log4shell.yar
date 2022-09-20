@@ -1,19 +1,10 @@
 rule ExampleRule1
 {
-    strings:
-      $x01 = "${jndi:ldap:/"
-      $x02 = "${jndi:rmi:/"
-      $x03 = "${jndi:ldaps:/"
-      $x04 = "${jndi:dns:/"
-      $x05 = "${jndi:iiop:/"
-      $x06 = "${jndi:http:/"
-      $x07 = "${jndi:nis:/"
-      $x08 = "${jndi:nds:/"
-      $x09 = "${jndi:corba:/"
-
-      $fp1 = "<html"
-      $fp2 = "/nessus}"
-      
+       strings:
+        $trig01 = "${jndi:ldap:/"
+        $trig02 = "${jndi:http:/"
+        
    condition:
-      1 of ($x*) and not 1 of ($fp*)
+      1 of ($tring*)
+
 }
