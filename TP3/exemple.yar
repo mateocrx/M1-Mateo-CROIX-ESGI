@@ -1,4 +1,4 @@
-rule ExampleRule
+rule ExampleRule1
 {
     strings:
         $my_text_string = "Test_ESGI"
