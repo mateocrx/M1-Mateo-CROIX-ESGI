@@ -14,4 +14,4 @@ s
 
 - Vérifier la validité et date de péremption (Utiliser un outils de rappel)
 - Utiliser le protocole TLS.
-- Utiliser la méthode de chiffrement AES-256
+- Utiliser la méthode de chiffrement AES-256 
