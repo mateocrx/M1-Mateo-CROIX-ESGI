@@ -1,0 +1,25 @@
+title: Test citrix
+id: 11111111-1111-1111-1111-111111111111
+status: test
+cve: CVE-2019-19781
+description: Detects citric
+author: Thomas PARADIS
+date: 2022/09/20
+logsource:
+    category: webserver
+    definition: 'Make sure that your Netscaler appliance logs all kinds of attacks (test with http://your-citrix-gw.net/robots.txt). The directory traversal with ../ might not be needed on certain cloud instances or for authenticated users, so we also check for direct paths. All scripts in portal/scripts are exploitable except logout.pl.'
+detection:
+    selection:
+        c-uri:
+        - '/../vpns/'
+        - '/vpns/cfg/smb.conf'
+        - '/vpns/portal/scripts/.pl'
+    condition: selection
+fields:
+    - client_ip
+    - vhost
+    - url
+    - response
+falsepositives:
+    - Unknown
+level: critical
