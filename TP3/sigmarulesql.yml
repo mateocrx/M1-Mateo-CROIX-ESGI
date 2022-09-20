@@ -15,7 +15,7 @@ detection:
         - '*SQLI=7*,*'
         - '*SQLI=8*,*'
         - '*SQLI=9*,*'
-   condition: reasons
+  condition: reasons
 falsepositives:
    - our vulnerability scanner
 level: medium
