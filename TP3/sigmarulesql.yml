@@ -5,16 +5,16 @@ description: detect if the field reasons contains SQLI=num
 author: ctechmat
 date: 2021/10/15
 detection:
-    reasons:
-        - '*SQLI=1*,*'
-        - '*SQLI=2*,*'
-        - '*SQLI=3*,*'
-        - '*SQLI=4*,*'
-        - '*SQLI=5*,*'
-        - '*SQLI=6*,*'
-        - '*SQLI=7*,*'
-        - '*SQLI=8*,*'
-        - '*SQLI=9*,*'
+  reasons:
+    - '*SQLI=1*,*'
+    - '*SQLI=2*,*'
+    - '*SQLI=3*,*'
+    - '*SQLI=4*,*'
+    - '*SQLI=5*,*'
+    - '*SQLI=6*,*'
+    - '*SQLI=7*,*'
+    - '*SQLI=8*,*'
+    - '*SQLI=9*,*'
   condition: reasons
 falsepositives:
    - our vulnerability scanner
