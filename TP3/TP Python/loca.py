@@ -31,10 +31,10 @@ if regex is not None:
             ips.append(current_ip)
 
 
-def supprimeDoublon(current_ip):
-    for i in current_ip:
-        if i not in current_ip:
-            current_ip.append(i)
+def supprimeDoublon(ips):
+    for i in ips:
+        if i not in ips:
+            ips.append(i)
         return
 
 print(ips, supprimeDoublon)
