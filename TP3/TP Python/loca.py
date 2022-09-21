@@ -34,6 +34,13 @@ try:
     print(ips)
 
 
+    def supprimeDoublon(current_ip):
+        for i in current_ip:
+            if i not in current_ip:
+                current_ip.append(i)
+            return
+
+
 except KeyboardInterrupt:
     exit
 
