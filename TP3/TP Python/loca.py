@@ -30,14 +30,14 @@ if regex is not None:
 
             ips.append(current_ip)
 
-print(ips)
-
 
 def supprimeDoublon(current_ip):
     for i in current_ip:
         if i not in current_ip:
             current_ip.append(i)
         return
+
+print(ips, supprimeDoublon)
 
 m = folium.Map(location=[45.372, -121.6972], zoom_start=12, tiles="Stamen Terrain")
 
