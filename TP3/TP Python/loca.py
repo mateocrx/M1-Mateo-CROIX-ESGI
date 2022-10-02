@@ -47,4 +47,4 @@ for ip in new_list:
         [ip["Longitude"], ip["Latitude"]], popup=ip["ip"], tooltip=tooltip
     ).add_to(m)
 
-m.save("index1.html")
+m.save("TP3/TP PYTHON/index.html")
