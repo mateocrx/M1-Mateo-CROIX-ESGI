@@ -9,7 +9,7 @@ import pandas as pd
 import folium
 
 
-f = open("TP PYTHON/access.log.txt",'r')
+f = open("TP3/TP PYTHON/access.log.txt",'r')
 text = f.read()
 
 
@@ -31,21 +31,20 @@ if regex is not None:
             ips.append(current_ip)
 
 
-def supprimeDoublon(ips):
-    for i in ips:
-        if i not in ips:
-            ips.append(i)
-        return
 
-print(ips, supprimeDoublon)
+new_list = [] 
+for i in ips: 
+    if i not in new_list: 
+        new_list.append(i) 
+print(new_list)
 
 m = folium.Map(location=[45.372, -121.6972], zoom_start=12, tiles="Stamen Terrain")
 
 tooltip = "Click me!"
 
-for ip in ips:
+for ip in new_list:
     folium.Marker(
         [ip["Longitude"], ip["Latitude"]], popup=ip["ip"], tooltip=tooltip
     ).add_to(m)
 
-m.save("index.html")
+m.save("index1.html")
